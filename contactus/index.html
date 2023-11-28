@@ -55,7 +55,7 @@
 						Somos un grupo de admiradores de Brandon Sanderson. Puedes contactarte con nosotros completando el siguiente formulario:
 					</p>
 
-					<form name="formulario" action="mailto:mail@gmail.com" class="row g-3">
+					<form name="formulario" method="POST" name="formulario-de-contacto" class="row g-3">
 						<div class="col-md-4">
 							<label for="nombre" class="form-label">Nombre</label>
 							<input type="text" id="nombre" class="form-control" name="nombre" required>
@@ -96,7 +96,9 @@
 								<br>
 								<div class="col-md-4">
 									<div class="col-12">
-										<input type="button" class="btn btn-primary" onclick="enviarForm()" value="Enviar">
+										<input type="submit" name="submit" id="botonenviar">
+					<input type="hidden" name="_next" value="https://ramiroarambarri.github.io/Portfolio/contactame.html">
+					<input type="hidden" name="_captcha" value="false">
 									</div>
 								</div>
 							</div>
