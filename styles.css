@@ -1,0 +1,261 @@
+body{
+	background: HoneyDew;
+	color: rgb(80 20 0);
+}
+
+h1, h2 {
+	text-align: center;
+	font-family: bahnschrift;
+}
+
+img{
+	width:100%;
+}
+
+p {
+	padding:0!important;
+}
+
+.navbar {
+	background: HoneyDew!important;
+}
+
+.separated{
+	border-bottom: solid darkGreen 4px;
+}
+
+.container {
+	text-align: justify;
+	margin: 1em auto;
+}
+
+#war-game-image {
+	width:100%;
+	height:100%;
+	margin: 2em 0 2em;
+	border: solid #487a3a 4px!important;
+	border-radius: 10px;
+	margin:0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: crimson;
+}
+
+/*Para la página "películas"*/
+
+#films-banner {
+	background-image: url("films/images/films-banner.jpg");
+	color: LightGreen;
+	min-height: 200px;
+	display: flex;
+	justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    text-shadow: 0 0 10px black, 0 0 10px black, 0 0 10px black;
+	background-position-y: center;
+	background-position-x: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-bottom: 2em;
+}
+
+.synopsis{
+	display: none;
+}
+
+.banner h1 {
+	font-size: 4em;
+}
+
+.gallery-item {
+	transition: 0.2s;
+}
+
+.gallery-item:hover{
+	scale: 1.1;
+}
+
+.gallery-active-item{
+	scale: 1.1;
+}
+
+.gallery a{
+	color: rgb(80 20 0)!important;
+}
+
+/*Para el índice cronológico*/
+
+td {
+	text-align: center;
+}
+
+.film-check {
+	scale: 1.5;
+}
+
+#return {
+	display: inline-block;
+	border: solid crimson 3px!important;
+	border-radius: 10px;
+	margin: 1em;
+	color: rgb(80 20 0);
+	padding: .5em;
+	transition: 0.2s;
+}
+
+#return:hover{
+	background: crimson;
+}
+
+
+/*Para el juego*/
+
+#cover {
+	border: solid #487a3a 4px!important;
+	border-radius: 10px;
+	max-width: 50%;
+	margin:0 auto;
+	display: block;
+}
+
+#game_container {
+	width: 100%;
+	max-width: 800px;
+	margin: 50px auto;
+	display: none;
+	border: solid #487a3a 4px!important;
+	border-radius: 10px;
+	background: white;
+	padding: 2em;
+}
+
+#players-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.player {
+	width: 35%;
+	max-width: 35%;
+	padding: 1em;
+	background: #a2db92;
+	border: solid #487a3a 3px!important;
+	border-radius: 10px;
+}
+
+
+
+#attack_button, #change_button, #next_button {
+	display:none;
+}
+
+#interface {
+	width: 100%;
+	display: flex;
+	padding: .5em;
+	min-height: 11em;
+	margin: 0 auto;
+	justify-content: center!important;
+}
+
+#button_group_1 {
+	width: 35%;
+	padding: .2em;
+}
+
+
+#button_group_2 {
+	width: 35%;
+	padding: .2em;
+	display: flex;
+	flex-direction: column;
+}
+
+#button_group_2 * {
+	height: 50%;
+}
+
+.mov_button, .char_button, #attack_button, #change_button, #next_button {
+
+}
+
+#feedback_container{
+	width: 30%;
+	padding: .2em;
+	margin: .4em;
+	border: solid #487a3a 3px!important;
+	border-radius: 10px;
+}
+
+#good_image, #villain_image {
+	max-width: 100%;
+	display: block;
+}
+
+.game_button {
+	background: #eb8d85;
+	border: solid #487a3a 3px!important;
+	border-radius: 10px;
+	transition: 0.1s;
+	padding: .3em;
+	width: 100%;
+	margin:.5em;
+}
+
+.game_button:hover {
+	background: #ea4031;
+}
+
+.game_button:active {
+	background: #ea4031;
+
+}
+
+.button_active {
+	background: lightGray;
+}
+
+.button_active:hover {
+	background: lightGray;
+}
+
+#good_name, #villain_name {
+	font-size: 1.5em
+}
+
+#start_button {
+	display:block;
+	margin: 2em auto;
+	border-radius: 10px;
+	width: 7em;
+	height: 4em;
+}
+
+#game_over {
+	font-size: 2em;
+	text-align: center;
+	border: solid #487a3a 3px!important;
+	border-radius: 10px;
+	padding: 1em;
+	display:none;
+	margin: 1em;
+	background: white;
+}
+
+@media (max-width: 600px) {
+	#interface{
+		flex-wrap: wrap;
+	}
+	#button_group_1{
+		width:50%;
+	}
+	#button_group_2{
+		width:50%;
+	} 
+	#feedback_container{
+	width: 100%;
+	}
+}
+

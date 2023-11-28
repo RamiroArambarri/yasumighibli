@@ -1,0 +1,120 @@
+	<!DOCTYPE html>
+	<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<link href="../estilos.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+
+		<title>Contáctanos</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline">
+			<div class="container-fluid">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link navbar-brand" aria-current="page" href="../index.html">Brandon Sanderson</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Libros
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="../libros/fantasia/fantasia.html">Fantasía</a></li>
+								<li><a class="dropdown-item" href="../libros/cs-ficcion/cs-ficcion.html">Ciencia ficción</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../cosmere/cosmere.html">El <em>Cosmere</em></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../mas-sanderson/mas-sanderson.html">Más sobre Brandon Sanderson</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="#">Contáctanos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../creditos/creditos.html">Créditos</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<main class="fondo-azul">
+			<div class="container">
+				<div class="bloque col-10">
+					<h2 class="titulo">¡Contáctate con nosotros!</h2>
+					<p>
+						Somos un grupo de admiradores de Brandon Sanderson. Puedes contactarte con nosotros completando el siguiente formulario:
+					</p>
+
+					<form name="formulario" action="mailto:mail@gmail.com" class="row g-3">
+						<div class="col-md-4">
+							<label for="nombre" class="form-label">Nombre</label>
+							<input type="text" id="nombre" class="form-control" name="nombre" required>
+
+							<div id="nombre-rechazado" class="rechazado">
+								Escriba su nombre
+							</div>
+						</div>
+						<div class="col-md-4">
+							<label for="apellido" class="form-label">Apellido</label>
+							<input type="text" class="form-control" id="apellido" name="apellido" required>
+
+							<div id="apellido-rechazado" class="rechazado">
+								Escriba su apellido
+							</div>
+						</div>
+						<div class="col-md-4">
+							<label for="email" class="form-label">Email</label>
+							<div class="input-group has-validation">
+								<input type="text" class="form-control" id="email" name="email" required>
+							</div>
+							<div id="mail-rechazado" class="rechazado">
+								Escriba un mail correcto
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="col-md-12">
+									<label for="mensaje"  class="form-label">Mensaje</label>
+									<div class="input-group has-validation">
+										<textarea id="mensaje" name="mensaje" class="form-control" required></textarea>
+
+									</div>
+									<div id="mensaje-rechazado" class="rechazado">
+										Escriba su mensaje
+									</div>
+								</div>
+								<br>
+								<div class="col-md-4">
+									<div class="col-12">
+										<input type="button" class="btn btn-primary" onclick="enviarForm()" value="Enviar">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<img src="imagenes/simbolo.png" id="simbolo" alt="Simbolo">
+							</div>
+						</div>
+					</form> 
+				</div>
+
+			</div>
+		</main>
+
+		<footer>
+			<p>Esta página fue creada por Ramiro Arambarri con propósitos puramente académicos. Todas las imágenes de esta página son propiedad de Brandon Sanderson</p>
+		</footer>
+
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+		<script src="enviar.js"></script>
+	</body>
+	</html>

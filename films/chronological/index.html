@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link href="../../styles.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	<script src="calculate.js"></script>
+
+	<title>Indice cronológico - Yasumi Ghibli</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline separated">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link navbar-brand" aria-current="page" href="../../index.html">Yasumi Ghibli</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../miyazaki/index.html">Hayao Miyazaki</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Películas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../ghiblitopics/index.html">Ghibli en profundidad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../facts/index.html">Curiosidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../parks/index.html">Parques temáticos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../game/index.html">Jugar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <a href="../index.html" id="return">← Volver<a>
+<div class="container">
+	<table col="10" class="table table-bordered table-striped table-success">
+  <thead>
+    <tr>
+      <th scope="col">Año</th>
+      <th scope="col">Título</th>
+      <th scope="col">Director</th>
+      <th scope="col">Guionista/s</th>
+      <th scope="col">Visto (sí/no)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1986</td>
+      <td><em>El castillo en el cielo</em></td>
+      <td colspan="2">Hayao Miyazaki</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>1988</td>
+      <td><em>La tumba de las luciérnagas</em></td>
+      <td colspan="2">Isao Takahata</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>1988</td>
+      <td><em>Mi vecino Totoro</em></td>
+      <td colspan="2">Hayao Miyazaki</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>1989</td>
+      <td><em>Kiki: Entregas a domicilio</em></td>
+      <td colspan="2">Hayao Miyazaki</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>1991</td>
+      <td><em>Recuerdos del ayer</em></td>
+      <td colspan="2">Isao Takahata</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>1992</td>
+      <td><em>Porco Rosso</em></td>
+      <td colspan="2">Hayao Miyazaki</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>1993</td>
+      <td><em>Puedo escuchar el mar</em></td>
+      <td>Tomomi Mochizuki</td>
+      <td>Nozomu Takahashi y Seiji Okuda</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>1994</td>
+      <td><em>Pompoko</em></td>
+      <td colspan="2"></td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>1995</td>
+      <td><em>Susurros del corazón</em></td>
+      <td>Yoshifumi Kondō</td>
+      <td>Hayao Miyazaki</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>1997</td>
+      <td><em>La princesa Mononoke</em></td>
+      <td colspan="2">Hayao Miyazaki</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>1999</td>
+      <td><em>Mis vecinos los Yamada</em></td>
+      <td colspan="2">Isao Takahata</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>2001</td>
+      <td><em>El viaje de Chihiro</em></td>
+      <td colspan="2">Hayao Miyazaki</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>2002</td>
+      <td><em>Haru en el reino de los gatos</em></td>
+      <td>Hiroyuki Morita</td>
+      <td>Reiko Yoshida</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>2004</td>
+      <td><em>El castillo ambulante</em></td>
+      <td colspan="2">Hayao Miyazaki</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>2006</td>
+      <td><em>Cuentos de Terramar</em></td>
+      <td>Gorō Miyazaki</td>
+      <td>Gorō Miyazaki y Keiko Niwa</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>2008</td>
+      <td><em>Ponyo en el acantilado</em></td>
+      <td colspan="2">Hayao Miyazaki</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>2010</td>
+      <td><em>Arrietty y el mundo de los diminutos</em></td>
+      <td>Hiromasa Yonebayashi</td>
+      <td>Hayao Miyazaki y Keiko Niwa</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>2011</td>
+      <td><em>La colina de las amapolas</em></td>
+      <td>Gorō Miyazaki</td>
+      <td>Hayao Miyazaki y Keiko Niwa</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>2013</td>
+      <td><em>El viento se levanta</em></td>
+      <td colspan="2">Hayao Miyazaki</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>2013</td>
+      <td><em>El cuento de la princesa Kaguya</em></td>
+      <td>Isao Takahata</td>
+      <td>Isao Takahata y Riko Sakaguchi</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>2014</td>
+      <td><em>El recuerdo de Marnie</em></td>
+      <td>Hiromasa Yonebayashi</td>
+      <td>Hiromasa Yonebayashi, Keiko Niwa<br>y Masashi Ando</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+
+      <td>2020</td>
+      <td><em>Earwig y la bruja</em></td>
+      <td>Gorō Miyazaki</td>
+      <td>Keiko Miwa y Emi Gunji</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+    <tr>
+      <td>2023</td>
+      <td><em>El chico y la garza</em></td>
+      <td colspan="2">Hayao Miyazaki</td>
+      <td><input type="checkbox" onclick="calculate()" class="film-check"></td>
+    </tr>
+  </tbody>
+</table>
+<p id="result"></p>
+
+</div>
+</body>
+</html>
