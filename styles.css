@@ -270,3 +270,7 @@ td {
 	color: red;
 	visibility: hidden;
 }
+
+#boton-oculto {
+	visibility: hidden;
+}
