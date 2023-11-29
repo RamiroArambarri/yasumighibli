@@ -1,53 +1,53 @@
-function enviarForm(){
-	let formRechazado = false  //variable que detecta si algun campo fue rechazado
+function send(){
+	let formRejected = false  //variable que detecta si algun campo fue rechazado
 
 	let ck_email = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/ 
 	let ck_name = /^[a-z ,.'-]+$/i
 
 
-	if(document.formulario.mensaje.value.length == 0){
-		document.formulario.mensaje.style.borderColor = 'red'
-		document.getElementById('mensaje-rechazado').style.visibility = 'visible';
-		document.formulario.mensaje.focus()
-		formRechazado = true
+	if(document.form.message.value.length == 0){
+		document.form.message.style.borderColor = 'red'
+		document.getElementById('message-rejected').style.visibility = 'visible';
+		document.form.message.focus()
+		formRejected = true
 	} else {
-		document.formulario.mensaje.style.border = 'none'
-		document.getElementById('mensaje-rechazado').style.visibility = 'hidden';
+		document.form.message.style.border = 'none'
+		document.getElementById('message-rejected').style.visibility = 'hidden';
 	}
 
-	if(!ck_email.test(document.formulario.email.value)){
-		document.formulario.email.style.borderColor = 'red'
-		document.getElementById('mail-rechazado').style.visibility = 'visible';
-		document.formulario.email.focus()
-		formRechazado = true
+	if(!ck_email.test(document.form.eemail.value)){
+		document.form.eemail.style.borderColor = 'red'
+		document.getElementById('mail-rejected').style.visibility = 'visible';
+		document.form.eemail.focus()
+		formRejected = true
 	} else {
-		document.formulario.email.style.border = 'none'
-		document.getElementById('mail-rechazado').style.visibility = 'hidden';
+		document.form.eemail.style.border = 'none'
+		document.getElementById('mail-rejected').style.visibility = 'hidden';
 	}
 
-	if(!ck_name.test(document.formulario.apellido.value)){
-		document.formulario.apellido.style.borderColor = 'red'
-		document.getElementById('apellido-rechazado').style.visibility = 'visible';
-		document.formulario.apellido.focus()
-		formRechazado = true
+	if(!ck_name.test(document.form.surname.value)){
+		document.form.surname.style.borderColor = 'red'
+		document.getElementById('surname-rejected').style.visibility = 'visible';
+		document.form.surname.focus()
+		formRejected = true
 	} else {
-		document.formulario.nombre.style.border = 'none'
-		document.getElementById('apellido-rechazado').style.visibility = 'hidden';
+		document.form.surname.style.border = 'none'
+		document.getElementById('surname-rejected').style.visibility = 'hidden';
 	}
 
 
-	if(!ck_name.test(document.formulario.nombre.value)){
-		document.formulario.nombre.style.borderColor = 'red'
-		document.getElementById('nombre-rechazado').style.visibility = 'visible';
-		document.formulario.nombre.focus()
-		formRechazado = true
+	if(!ck_name.test(document.form.name.value)){
+		document.form.name.style.borderColor = 'red'
+		document.getElementById('name-rejected').style.visibility = 'visible';
+		document.form.name.focus()
+		formRejected = true
 	} else {
-		document.formulario.nombre.style.border = 'none'
-		document.getElementById('nombre-rechazado').style.visibility = 'hidden';
+		document.form.name.style.border = 'none'
+		document.getElementById('name-rejected').style.visibility = 'hidden';
 	}
 
-	if(!formRechazado){
-		document.formulario.submit()  //Si todos los campos son correctos se envía
+	if(!formRejected){
+		document.form.submit()  //Si todos los campos son correctos se envía
 	}
 
 }

@@ -259,3 +259,14 @@ td {
 	}
 }
 
+/*Para el formulario*/
+
+#message {
+	min-height: 10em;
+	resize: none!important;
+}
+
+.rejected {
+	color: red;
+	visibility: hidden;
+}
