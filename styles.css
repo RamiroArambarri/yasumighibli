@@ -1,12 +1,26 @@
 body{
 	background: HoneyDew;
-	color: rgb(80 20 0);
+	color: #703000!important;
 }
+
+.navbar * {
+	color: #703000!important;
+}
+
+.container {
+	text-align: justify;
+	padding: 1em;
+	width:100%;
+}
+
 
 h1, h2 {
 	text-align: center;
 	font-family: bahnschrift;
+	margin: 1em;
 }
+
+
 
 img{
 	width:100%;
@@ -14,6 +28,8 @@ img{
 
 p {
 	padding:0!important;
+	margin: 0!important;
+
 }
 
 .navbar {
@@ -21,21 +37,8 @@ p {
 }
 
 .separated{
-	border-bottom: solid darkGreen 4px;
-}
-
-.container {
-	text-align: justify;
-	margin: 1em auto;
-}
-
-#war-game-image {
-	width:100%;
-	height:100%;
-	margin: 2em 0 2em;
-	border: solid #487a3a 4px!important;
-	border-radius: 10px;
-	margin:0 auto;
+	border-bottom: solid #c0c0c0 4px;
+	margin: 0 0 1em 0;
 }
 
 a {
@@ -43,12 +46,18 @@ a {
 	color: crimson;
 }
 
-/*Para la página "películas"*/
+section {
+	margin: 0 0 1em 0!important;
+	padding: 1em;
+	font-size: 1.2em;
+}
 
-#films-banner {
-	background-image: url("films/images/films-banner.jpg");
-	color: LightGreen;
-	min-height: 200px;
+footer {
+	border-top: solid #c0c0c0 2px;
+	font-size: 0.8em;
+}
+
+.banner {
 	display: flex;
 	justify-content: center; 
     align-items: center;
@@ -59,6 +68,26 @@ a {
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-bottom: 2em;
+	color: LightGreen;
+	min-height: 200px;
+}
+
+.img-footer {
+	font-size: 0.8em;
+}
+
+/*Para la home page*/
+
+#homepage-banner {
+	background-image: url("images/homepage-banner.jpg");
+	min-height: 300px;
+}
+
+
+/*Para la página "películas"*/
+
+#films-banner {
+	background-image: url("films/images/films-banner.jpg");
 }
 
 .synopsis{
@@ -71,6 +100,7 @@ a {
 
 .gallery-item {
 	transition: 0.2s;
+	text-align: left;
 }
 
 .gallery-item:hover{
@@ -81,8 +111,8 @@ a {
 	scale: 1.1;
 }
 
-.gallery a{
-	color: rgb(80 20 0)!important;
+.gallery-item a{
+	color: #703000!important;
 }
 
 /*Para el índice cronológico*/
@@ -97,51 +127,75 @@ td {
 
 #return {
 	display: inline-block;
-	border: solid crimson 3px!important;
 	border-radius: 10px;
 	margin: 1em;
-	color: rgb(80 20 0);
+	color: #703000;
 	padding: .5em;
+	background: #C0C0C0;
 	transition: 0.2s;
 }
 
 #return:hover{
-	background: crimson;
+	background: lightGreen;
 }
 
+/*Para de análisis*/
+
+#topics-banner {
+	background-image: url("ghiblitopics/images/landscape.jpg");
+
+}
+
+/*Para las curiosidades*/
+
+.fact {
+	border-bottom: solid #c0c0c0 4px;
+	padding: 0.5em 0;
+	margin: 0.5em;
+}
 
 /*Para el juego*/
 
 #cover {
-	border: solid #487a3a 4px!important;
-	border-radius: 10px;
 	max-width: 50%;
-	margin:0 auto;
+	margin: 0 auto 4em;
 	display: block;
+}
+
+#war-game-image {
+	width:100%;
+	height:100%;
+	margin: 2em 0 2em;
+	margin:0 auto;
 }
 
 #game_container {
 	width: 100%;
 	max-width: 800px;
+	height: 600px;
 	margin: 50px auto;
 	display: none;
 	border: solid #487a3a 4px!important;
-	border-radius: 10px;
 	background: white;
 	padding: 2em;
+	flex-direction: column;
 }
 
 #players-container {
 	display: flex;
 	justify-content: space-around;
+	height: 70%;
+}
+
+.player h2 {
+	margin: 1em;
 }
 
 .player {
 	width: 35%;
 	max-width: 35%;
 	padding: 1em;
-	background: #a2db92;
-	border: solid #487a3a 3px!important;
+	background: lightGreen;
 	border-radius: 10px;
 }
 
@@ -153,40 +207,52 @@ td {
 
 #interface {
 	width: 100%;
+	height: 30%;
 	display: flex;
 	padding: .5em;
 	min-height: 11em;
 	margin: 0 auto;
-	justify-content: center!important;
+	justify-content: space-around!important;
+	align-items: stretch;
 }
 
-#button_group_1 {
-	width: 35%;
-	padding: .2em;
+#buttons_block {
+	display: flex;
+	width: 65%;
 }
 
+#feedback_block {
+	width: 30%;
+}
 
-#button_group_2 {
-	width: 35%;
+#button_group_1{
 	padding: .2em;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+#button_group_1 * {
+	height: 25%;
+}
+
+#button_group_2{
+	padding: .2em;
+	width: 50%;
 	display: flex;
 	flex-direction: column;
 }
 
 #button_group_2 * {
-	height: 50%;
+	height: 100%;
 }
 
-.mov_button, .char_button, #attack_button, #change_button, #next_button {
-
-}
 
 #feedback_container{
-	width: 30%;
-	padding: .2em;
-	margin: .4em;
-	border: solid #487a3a 3px!important;
-	border-radius: 10px;
+	overflow: auto;
+	padding: 0.5em;
+	height: 100%;
+	border: solid #c0c0c0 3px!important;
 }
 
 #good_image, #villain_image {
@@ -195,22 +261,25 @@ td {
 }
 
 .game_button {
-	background: #eb8d85;
-	border: solid #487a3a 3px!important;
+	background: lightcoral;
 	border-radius: 10px;
 	transition: 0.1s;
 	padding: .3em;
 	width: 100%;
 	margin:.5em;
+	border:none;
 }
 
 .game_button:hover {
-	background: #ea4031;
+	background: crimson;
 }
 
-.game_button:active {
-	background: #ea4031;
+.char_button {
+	background: lightgreen;
+}
 
+.char_button:hover {
+	background: green;
 }
 
 .button_active {
@@ -237,7 +306,6 @@ td {
 	font-size: 2em;
 	text-align: center;
 	border: solid #487a3a 3px!important;
-	border-radius: 10px;
 	padding: 1em;
 	display:none;
 	margin: 1em;
@@ -245,17 +313,27 @@ td {
 }
 
 @media (max-width: 600px) {
+	.players-container {
+		height: 30%;
+	}
+
 	#interface{
+		height: 70%;
+		display: flex;
 		flex-wrap: wrap;
+		flex-direction: column;
 	}
-	#button_group_1{
-		width:50%;
+	#buttons_block{
+		width: 100%;
+		height: 50%;
 	}
-	#button_group_2{
-		width:50%;
-	} 
-	#feedback_container{
+	#feedback_block{
 	width: 100%;
+	height: 40%;
+	}
+
+	#good_name, #villain_name {
+		font-size: 1em;
 	}
 }
 
@@ -271,6 +349,19 @@ td {
 	visibility: hidden;
 }
 
-#boton-oculto {
+#hidden-button {
 	visibility: hidden;
+}
+
+/*Para la página de referencias*/
+
+#references-banner{
+	background-image: url("references/images/references-banner.jpg");
+}
+
+/*Para la página de parques*/
+
+#parks-banner {
+	background-image: url("parks/images/parks-banner.jpg");
+	min-height: 200px;
 }

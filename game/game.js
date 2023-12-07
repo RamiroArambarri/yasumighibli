@@ -307,11 +307,14 @@ function start() {
   //Se acomadan los elementos HTML.
   movButtons = document.getElementsByClassName("mov_button");
   charButtons = document.getElementsByClassName("char_button");
-  document.getElementById("game_container").style.display = "block";
+  document.getElementById("game_container").style.display = "flex";
   document.getElementById("start_button").style.display = "none";
   document.getElementById("game_over").style.display = "none";
   document.getElementById("cover").style.display = "none";
   document.getElementById("game_over").style.display = "none";
+  for(let i = 0; i < charButtons.length; i ++) {
+    charButtons[i].classList.remove('button_active')
+  }
   //Se inicializan personajes buenos y malos con sus estadisticas, su imagen, nombre, ataque, movimientos y estado, que podrá ser "none", "burned" o "sad"
   goods = [
     {
@@ -408,9 +411,7 @@ function attackPhase() {
   for (let i = 0; i < movButtons.length; i++) {
     movButtons[i].style.display = "block";
   }
-  for (let i = 0; i < movButtons.length; i++) {
-    movButtons[i].innerHTML = goods[currGood].movs[i].name;
-  }
+  
 
   for (let i = 0; i < charButtons.length; i++) {
     charButtons[i].style.display = "none";
@@ -604,7 +605,6 @@ function changePhase() {
   for (let i = 0; i < movButtons.length; i++) {
     movButtons[i].style.display = "none";
   }
-//Se acomodan los botones
   document.getElementById("attack_button").classList.remove("button_active");
   document.getElementById("change_button").classList.add("button_active");
 }
@@ -686,7 +686,7 @@ function end() {
     document.getElementById("game_over").innerHTML = sentences[4];
   }
 }
-//Para actualizar las vidas, imágenes y nombres de los pjs en combate
+//Para actualizar las vidas, imágenes los nombres y los nombres de los movimientos de los pjs en combate
 function updateCharacters() {
   document.getElementById("good_hp").style.width = goods[currGood].hp + "%";
   document.getElementById("villain_hp").style.width =
@@ -696,6 +696,9 @@ function updateCharacters() {
     villains[currVillain].name;
   document.getElementById("good_image").src = goods[currGood].image;
   document.getElementById("villain_image").src = villains[currVillain].image;
+  for (let i = 0; i < movButtons.length; i++) {
+    movButtons[i].innerHTML = goods[currGood].movs[i].name;
+  }
 }
 //Se activa cuando el jugador pasa el cursor sobre los botones
 function descrive(index) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
 	<title>Contáctanos - Yasumi Ghibli</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline">
+	<nav class="navbar navbar-expand-lg bg-body-tertiary nav-underline separated">
 		<div class="container-fluid">
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -17,37 +17,35 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-						<a class="nav-link navbar-brand active" aria-current="page" href="#">Yasumi Ghibli</a>
+						<a class="nav-link navbar-brand" aria-current="page" href="../index.html">Yasumi Ghibli</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="miyazaki/index.html">Hayao Miyazaki</a>
+						<a class="nav-link" href="../miyazaki/index.html">Hayao Miyazaki</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="films/index.html">Películas</a>
+						<a class="nav-link" href="../films/index.html">Películas</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="ghiblitopics/index.html">Ghibli en profundidad</a>
+						<a class="nav-link" href="../ghiblitopics/index.html">Ghibli en profundidad</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="facts/index.html">Curiosidades</a>
+						<a class="nav-link" href="../facts/index.html">Curiosidades</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="parks/index.html">Parques temáticos</a>
+						<a class="nav-link" href="../parks/index.html">Lugares temáticos</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="game/index.html">Jugar</a>
+						<a class="nav-link" href="../game/index.html">Jugar</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<main class="container">
-
+	<main class="container my-4">
 			<h2>Contáctanos</h2>
 			<p>
 				Contáctate con los administradores de la página completando el siguiente formulario:
 			</p>
-
 			<form name="form" action="https://formsubmit.co/raarambarri@gmail.com" method="POST">
 				<div class="row">
 					<div class="col-md-4">
@@ -78,13 +76,12 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						<img src="../films/images/films-banner.jpg" id="simbolo" alt="Simbolo">
+						<img src="../films/images/films-banner.jpg" alt="Personajes de Mi vecino Totoro gritando" class="rounded-4">
 					</div>
 					<div class="col-md-6">
 						<label for="message"  class="form-label">Mensaje</label>
 						<div class="input-group has-validation">
 							<textarea id="message" name="message" class="form-control" required></textarea>
-
 						</div>
 						<div id="message-rejected" class="rejected">
 							Escriba su mensaje
@@ -92,23 +89,22 @@
 						<br>
 						<div class="col-md-4">
 							<div class="col-12">
-								<button id="boton-oculto" type="submit"></button>
+								<button id="hidden-button" type="submit"></button>
 								<input type="button"  value="enviar" onclick="send()">
 								<input type="hidden" name="_next" value="https://ramiroarambarri.github.io/yasumighibli/contactus/index.html">
 								<input type="hidden" name="_captcha" value="false">
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</form> 
-
 	</main>
-
-	<footer>
-		<p>Esta página está hecha para probar el formulario</p>
+	<footer class="container">
+		<p>Esta página fue creada por Ramiro Arambarri con propósitos puramente académicos. Todas las imágenes de esta página son propiedad de Studio Ghibli.<br>
+		<a href="#">Haz click aquí</a> para contactarte con los administradores del sitio.
+		<a href="../credits/index.html">Haz click aquí</a> para ver sobre el autor.
+	</p>
 	</footer>
-
 	<script src="send.js"></script>
 </body>
 </html>
