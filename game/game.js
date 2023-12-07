@@ -18,6 +18,8 @@ let mustChange; //Es true cuando el jugador está obigado a cambiar de personaje
 let nextSentence; //Guarda la proxima frase que se mostrará en pantalla
 let dragonHaku; //Variable para controlar el ataque "metamorfosis"
 //Descripciones de los ataques de los buenos (primero los de Haku, luego los de Howl, luego los de San)
+let goods = [];//Array de personajes buenos
+let villains = [];//Array de personajes malos
 let goodDescriptions = [
   [
     "Causa daño al rival.",
@@ -211,7 +213,7 @@ let goodMovList = [
     {
       name: goodAttackNames[2][2],
       effect: function () {//Resta a la defenza del rival, pero no puede pasar de -9
-        villains[currVillain].def -= 2
+        villains[currVillain].def -= 2;
         if (goods[currGood].def < -9) {
           goods[currGood].def = -9;
         }
@@ -252,7 +254,7 @@ let villainMovList = [
     {
       name: villainAttackNames[1][0],
       effect: function () {
-        goods[currGood].def -= 1
+        goods[currGood].def -= 1;
         if (goods[currGood].def < -9) {
           goods[currGood].def = -9;
         }
@@ -299,8 +301,7 @@ let villainMovList = [
   ],
 ];
 
-let goods = [];//Array de personajes buenos
-let villains = [];//Array de personajes malos
+
 
 //Para iniciar el juego
 function start() {
@@ -313,7 +314,7 @@ function start() {
   document.getElementById("cover").style.display = "none";
   document.getElementById("game_over").style.display = "none";
   for(let i = 0; i < charButtons.length; i ++) {
-    charButtons[i].classList.remove('button_active')
+    charButtons[i].classList.remove('button_active');
   }
   //Se inicializan personajes buenos y malos con sus estadisticas, su imagen, nombre, ataque, movimientos y estado, que podrá ser "none", "burned" o "sad"
   goods = [
@@ -418,7 +419,7 @@ function attackPhase() {
   }
   //Estámos en la attack phase, se muestra la frase correspondiente con ShowPhaseSentence()
   gamePhase = "attackPhase";
-  showPhaseSentence()
+  showPhaseSentence();
   //Si había personajes pendientes de cambiar, se cambian. Siempre que los personajes cambien, los valores de "villainChangesTo" y de "goodChangesTo" volverán a -1
   if (goodChangesTo != -1) {
     currGood = goodChangesTo;
@@ -566,13 +567,13 @@ function movEffectPhase() {
 function villainMovSelection() {
   //Se sortea el número de índice del próximo movimiento
   if(Math.random() < 0.5) {//El primer ataque tiene un 50% de probabilidades
-    selection = 0
+    selection = 0;
   } else if (Math.random() < 0.5) {//Los otros tienen un 25%
-    selection = 1
+    selection = 1;
   } else {
-    selection = 2
+    selection = 2;
   }//Se guarda el siguiente movimiento
-  settedVillainMov = villains[currVillain].movs[selection]
+  settedVillainMov = villains[currVillain].movs[selection];
 }
 
 //Cuando el jugador clickea "siguiente"
