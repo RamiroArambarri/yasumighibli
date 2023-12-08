@@ -47,15 +47,15 @@ let sentences = [
   "Selecciona un personaje.",
   "Causó daño.",
   "Haku se transfrmó en dragón.",
-  "Aumentó su velocidad",
+  "Aumentó su velocidad.",
   "Aumentó el ataque de todo tu equipo.",
   "Disminuyó el ataque de su rival.",
   "Disminuyó la defenza de su rival.",
   "Quemó al rival.",
   "Entristeció al rival.",
-  "Aumentó mucho su ataque",
-  "aumentó mucho su velocidad",
-  "La transformación terminó",
+  "Aumentó mucho su ataque.",
+  "aumentó mucho su velocidad.",
+  "La transformación terminó.",
 ];
 //Nombres de los ataques de los buenos
 let goodAttackNames = [
