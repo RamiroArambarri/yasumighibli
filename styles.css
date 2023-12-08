@@ -199,9 +199,10 @@ td {
 	padding: 1em;
 	background: lightGreen;
 	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
-
-
 
 #attack_button, #change_button, #next_button {
 	display:none;
@@ -314,13 +315,17 @@ td {
 	background: white;
 }
 
+#error {
+	display: none;
+}
+
 @media (max-width: 600px) {
-	.players-container {
-		height: 30%;
+	#players-container {
+		height: 50%;
 	}
 
 	#interface{
-		height: 70%;
+		height: 50%;
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: column;

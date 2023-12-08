@@ -549,10 +549,10 @@ function movEffectPhase() {
   }
 
   if (movNumber == 2) {
-    if (dragonHaku == 1) {
+    if (currGood == 0 && dragonHaku == 1) {
       dragonHaku++;
       goods[0].image = "images/haku-dragon.png";
-    } else if (dragonHaku > 1) {
+    } else if (currGood == 0 && dragonHaku > 1) {
       dragonHaku = 0;
       goods[0].image = "images/haku.png";
       addSentence(sentences[16]);
@@ -639,7 +639,7 @@ function villainChanges() {
 //Para calcular el daño recibido por un movimiento del pj contrario. Los parámetros son el daño base del movimiento, y los personajes atacante y receptor 
 function calcDamage(damage, attacker, target) {
   let extraPower = 1;//Si el pj es Haku y es un dragón, se establece un multiplicador X2.2
-  if (dragonHaku != 0) {
+  if (currGood == 0 && dragonHaku != 0) {
     extraPower = 2.2;
   }
   //Se calcula el daño
