@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'AveriaSansLibre';
+  src: url('averiasanslibre-regular.ttf')
+}
+
 body{
 	background: HoneyDew;
 	color: #703000!important;
@@ -16,7 +21,7 @@ body{
 
 h1, h2 {
 	text-align: center;
-	font-family: UD Digi Kyokasho NK-B;
+	font-family: AveriaSansLibre;
 	margin: 1em;
 }
 
