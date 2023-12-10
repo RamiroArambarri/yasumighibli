@@ -22,7 +22,7 @@ function gallery(element) {
       }
     }
   } else {
-    //Si el elemento ya estaba seleccionado, se seleccionan todos
+    //Si el elemento ya estaba seleccionado, se deseleccionan todos
     for (let i = 0; i < covers.length; i++) {
       covers[i].classList.remove("gallery-active-item");
       covers[i].style.opacity = 1;

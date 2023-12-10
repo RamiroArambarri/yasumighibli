@@ -17,9 +17,9 @@ let order; //Guarda el orden en el que se realizarán los ataque en la próxima 
 let mustChange; //Es true cuando el jugador está obigado a cambiar de personaje (Si acaba de morir)
 let nextSentence; //Guarda la proxima frase que se mostrará en pantalla
 let dragonHaku; //Variable para controlar el ataque "metamorfosis"
-//Descripciones de los ataques de los buenos (primero los de Haku, luego los de Howl, luego los de San)
 let goods = [];//Array de personajes buenos
 let villains = [];//Array de personajes malos
+//Descripciones de los ataques de los buenos (primero los de Haku, luego los de Howl, luego los de San)
 let goodDescriptions = [
   [
     "Causa daño al rival.",
@@ -270,7 +270,7 @@ let villainMovList = [
     },
     {
       name: villainAttackNames[1][2],
-      effect: function () { //Establece que el estado de tu personaje es igual a "sad". El segundo parámetro es el contador de puntos
+      effect: function () { //Establece que el estado de tu personaje es igual a "sad". El segundo parámetro es el contador de turnos.
         goods[currGood].state = ["sad", 1];
         addSentence(sentences[13]);
       },
