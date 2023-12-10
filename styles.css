@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'AveriaSansLibre';
-  src: url('averiasanslibre-regular.ttf')
+  src: url('averiasanslibre-regular.ttf');
 }
 
 body{
@@ -22,7 +22,7 @@ body{
 h1, h2 {
 	text-align: center;
 	font-family: AveriaSansLibre;
-	margin: 1em;
+	margin: 1em 1em;
 }
 
 
