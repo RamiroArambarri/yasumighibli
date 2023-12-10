@@ -527,6 +527,7 @@ function movEffectPhase() {
       end();//Caso afirmativo, termina el juego 
     } else {
       villainChanges();//Caso negativo, se cambia el villano
+      damageToVillain = 0;
     }
   } else {//En caso de que el villano no muriera con el siguiente ataque
     villains[currVillain].hp -= damageToVillain;//Se efectua el daño
@@ -542,6 +543,7 @@ function movEffectPhase() {
       mustChange = true;
       charButtons[currGood].classList.add("button_active");
       changePhase();
+      damageToGood = 0;
     }
   } else {
     goods[currGood].hp -= damageToGood;
