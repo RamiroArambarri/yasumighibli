@@ -1,4 +1,4 @@
-function validate() {
+function send() {
   let formRejected = false; //variable que detecta si algun campo fue rechazado
 
   let ck_email = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
@@ -16,13 +16,13 @@ function validate() {
     document.getElementById("message-rejected").style.visibility = "hidden";
   }
 
-  if (!ck_email.test(document.form.email.value)) {
-    document.form.email.style.borderColor = "red";
+  if (!ck_email.test(document.form.eemail.value)) {
+    document.form.eemail.style.borderColor = "red";
     document.getElementById("mail-rejected").style.visibility = "visible";
-    document.form.email.focus();
+    document.form.eemail.focus();
     formRejected = true;
   } else {
-    document.form.email.style.border = "none";
+    document.form.eemail.style.border = "none";
     document.getElementById("mail-rejected").style.visibility = "hidden";
   }
 
@@ -47,7 +47,6 @@ function validate() {
   }
 
   if (!formRejected) {
-   console.log('se validó')
    document.form.submit(); //Si todos los campos son correctos se envía
   }
 }
