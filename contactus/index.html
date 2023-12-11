@@ -46,7 +46,7 @@
 			<p>
 				Contáctate con los administradores de la página completando el siguiente formulario:
 			</p>
-			<form name="form" action="https://formsubmit.co/raarambarri@gmail.com" method="POST">
+			<form name="form" action="send.php" method="POST">
 				<div class="row">
 					<div class="col-md-4">
 						<label for="name" class="form-label">Nombre</label>
@@ -65,9 +65,9 @@
 						</div>
 					</div>
 					<div class="col-md-4">
-						<label for="eemail" class="form-label">Email</label>
+						<label for="email" class="form-label">Email</label>
 						<div class="input-group has-validation">
-							<input type="text" class="form-control" id="eemail" name="eemail" required>
+							<input type="text" class="form-control" id="email" name="email" required>
 						</div>
 						<div id="mail-rejected" class="rejected">
 							Escriba un mail correcto
@@ -89,10 +89,7 @@
 						<br>
 						<div class="col-md-4">
 							<div class="col-12">
-								<input class="stnd_button col-12 mx-auto my-auto" type="button"  value="enviar" onclick="send()">
-								<button id="hidden-button" type="submit"></button>
-								<input type="hidden" name="_next" value="https://ramiroarambarri.github.io/yasumighibli/contactus/index.html">
-								<input type="hidden" name="_captcha" value="false">
+								<input class="stnd_button col-12 mx-auto my-auto" type="button"  value="enviar" onclick="validate()">
 							</div>
 						</div>
 					</div>
@@ -105,6 +102,6 @@
 		<a href="../credits/index.html">Haz click aquí</a> para ver sobre el autor.
 	</p>
 	</footer>
-	<script src="send.js"></script>
+	<script src="validate.js"></script>
 </body>
 </html>
