@@ -12,7 +12,7 @@ function send() {
     document.form.message.focus();
     formRejected = true;
   } else {
-    document.form.message.style.border = "none";
+    document.form.message.style.border c= "none";
     document.getElementById("message-rejected").style.visibility = "hidden";
   }
 
